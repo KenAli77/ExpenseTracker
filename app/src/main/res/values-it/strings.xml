@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="open">apri</string>
+    <string name="close">chiudi</string>
+    <string name="nav_drawer_header">My Expense Tracker</string>
+    <string name="oops">Oops..</string>
+    <string name="empty_transactions_text">Sembra che tu non abbia ancora inserito transazioni, prova ad aggiungerne una</string>
+    <string name="btn_add_transaction_text">AGGIUNGI</string>
+    <string name="select_currency">Seleziona valuta</string>
+    <string name="usd">$ USD</string>
+    <string name="eur">€ EUR</string>
+    <string name="gbp">£ GBP</string>
+    <string name="jpy">¥ JPY</string>
+    <string name="add_new_transaction">aggiungi nuova transazione</string>
+    <string name="btn_save_transaction_text">SALVA</string>
+    <string name="total_expenses_analysis">Analisi totale spese</string>
+    <string name="total_income_analysis">Analisi totale entrate</string>
+    <string name="dark_theme">Tema dark</string>
+    <string name="spending_limit">Limite spese</string>
+    <string name="enter_amount">Inserisci importo..</string>
+    <string name="title">Nome</string>
+    <string name="transaction_title">Nome transazione</string>
+    <string name="type">Tipo</string>
+    <string name="transaction_type">Tipo di transazione</string>
+    <string name="category">Categoria</string>
+    <string name="transaction_category">Categoria transazione</string>
+    <string name="amount">Importo</string>
+    <string name="transaction_amount">Importo transazione</string>
+    <string name="notes">Note</string>
+    <string name="transaction_notes">Note transazione</string>
+    <string name="date">Data</string>
+    <string name="transaction_date">Data della transazione</string>
+    <string name="edit">MODIFICA</string>
+    <string name="total_expense">TOTALE SPESE</string>
+    <string name="total_income">TOTALE ENTRATE</string>
+    <string name="spending_progress">Progresso spese</string>
+    <string name="limit_not_set">limite non impostato</string>
+    <string name="warning">attenzione</string>
+    <string name="spending_warning">Attento! Sei molto vicino al tuo limite spese!</string>
+    <string name="total_balance">BILANCIO</string>
+    <string name="reports">Analisi</string>
+    <string name="settings">Impostazioni</string>
+    <string name="export_data">Esporta dati</string>
+    <string name="transaction_saved">Transazione salvata</string>
+    <string name="missing_field">Please enter field</string>
+    <string name="required_field">campo necessario</string>
+    <string name="invalid_date">La data inserita non e\' valida</string>
+    <string name="missing_transaction_type">Non hai selezionato il tipo di transazione</string>
+    <string name="missing_category">Non hai selezionato la categoria</string>
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="transaction_deleted">Transazione eliminata</string>
+    <string name="expenses_by_category">Spese per categoria</string>
+    <string name="income_by_category">Entrate per categoria</string>
+    <string name="undo">Cancella</string>
+    <string name="income">Entrate</string>
+    <string name="expenses">Spese</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="add_transaction">Nuova transazione</string>
+    <string name="transaction_details">Dettagli</string>
+    <string name="edit_transaction">Modifica</string>
+    <string name="change_saved">modifice salvate con successo</string>
+    <string name="invalid_spending_limit">non hai inserito un limite spese</string>
+    <string name="bills">Bollette</string>
+    <string name="food">Cibo </string>
+    <string name="education">Studi</string>
+    <string name="entertainment">Intrattenimento</string>
+    <string name="housing">Casa</string>
+    <string name="health">Salute</string>
+    <string name="travel">Viaggi</string>
+    <string name="transportation">Mezzi</string>
+    <string name="shopping">Shopping</string>
+    <string name="other">Altro</string>
+    <string name="salary">Stipendio</string>
+    <string name="investments">Investimenti</string>
+    <string name="save">salva</string>
+
+    <string-array name="periods">
+        <item>tutte le transazioni</item>
+        <item>questo mese</item>
+        <item>dal mese scorso</item>
+        <item>ultimi tre mesi</item>
+        <item>ultimi sei mesi</item>
+        <item>ultimo anno</item>
+    </string-array>
+</resources>

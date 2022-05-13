@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_spending_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spending_progress"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_spending"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:max="10"
+        android:progress="5"
+        android:progressTint="@color/blue_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_spending_progress" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="70%"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_spending"/>
+    <TextView
+        android:id="@+id/tv_spending_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/limit_not_set"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_spending"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

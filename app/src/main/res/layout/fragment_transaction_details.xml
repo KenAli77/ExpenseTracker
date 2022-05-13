@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp"
+    tools:context=".ui.TransactionDetailFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/blue_500"
+            android:textSize="25sp"
+             />
+
+        <TextView
+            android:id="@+id/tv_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_title"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_details_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_details_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textColor="@color/blue_500"
+            android:textSize="25sp"
+            android:fontFamily="@font/nunito_bold" />
+
+        <TextView
+            android:id="@+id/tv_details_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_type"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_details_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_details_type">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textColor="@color/blue_500"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="25sp"
+             />
+
+        <TextView
+            android:id="@+id/tv_details_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_category"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_details_transaction_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_details_category">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textColor="@color/blue_500"
+            android:textSize="25sp"
+            android:fontFamily="@font/nunito_bold"
+             />
+
+        <TextView
+            android:id="@+id/tv_details_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_amount"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_details_transaction_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_details_transaction_amount">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notes"
+            android:textColor="@color/blue_500"
+            android:textSize="25sp"
+            android:fontFamily="@font/nunito_bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_details_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_notes"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_details_transaction_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_details_transaction_notes">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/blue_500"
+            android:textSize="25sp"
+            android:fontFamily="@font/nunito_bold" />
+
+        <TextView
+            android:id="@+id/tv_details_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_date"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_edit_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/blue_500"
+        android:text="@string/edit"
+        android:fontFamily="@font/nunito_semibold"
+        android:textAlignment="center"
+        android:textColor="@color/btn_text"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_edit"
+        app:iconTint="@color/btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

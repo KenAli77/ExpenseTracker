@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toools="http://schemas.android.com/tools"
+    android:id="@+id/total_balance_view"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:backgroundTint="@color/surface"
+    android:padding="20dp"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/total_balance" />
+
+        <TextView
+            android:id="@+id/tv_total_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            toools:text="$ 5,000"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

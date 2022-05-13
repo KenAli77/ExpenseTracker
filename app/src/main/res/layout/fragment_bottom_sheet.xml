@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomBottomSheetDialog"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    tools:context=".dialogs.BottomSheetFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/select_currency"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_second_row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_usd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/usd" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_EUR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/eur" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pound"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/gbp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_yen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/jpy" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_first_row">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_inr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="₹ INR" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_KRW"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="₩ KRW" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_SEK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="kr SEK"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_RUB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="₽ RUB" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

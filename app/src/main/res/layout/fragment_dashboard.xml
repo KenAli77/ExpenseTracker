@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    tools:context=".ui.DashboardFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashboard_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/warning_view"
+                layout="@layout/spending_warning_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+            <include
+                android:id="@+id/total_balance_view"
+                layout="@layout/total_balance_view"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/warning_view" />
+
+            <LinearLayout
+                android:id="@+id/ll_cards"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total_balance_view">
+
+                <include
+                    android:id="@+id/item_expense_card_view"
+                    layout="@layout/item_expense_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/item_income_card_view"
+                    layout="@layout/item_income_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/spending_progress"
+                layout="@layout/spending_limit_progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_cards" />
+
+            <Spinner
+                android:id="@+id/sp_transactions_filter"
+                style="@style/spinnerItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:entries="@array/periods"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spending_progress" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_transactions"
+                android:layout_width="match_parent"
+                android:padding="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_transactions_filter"
+                tools:listitem="@layout/list_item_transaction" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+<ViewStub
+    android:id="@+id/empty_data_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout="@layout/empty_data_view"
+    android:visibility="gone"
+    />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="14dp"
+        android:layout_margin="10dp"
+
+        android:backgroundTint="@color/blue_500"
+        android:contentDescription="@string/add_new_transaction"
+        android:src="@drawable/ic_add"
+        app:borderWidth="0dp"
+        app:tint="@color/btn_text"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

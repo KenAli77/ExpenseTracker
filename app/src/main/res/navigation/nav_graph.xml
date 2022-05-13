@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.example.expensetracker.ui.AddTransactionFragment"
+        android:label="@string/add_new_transaction"
+        tools:layout="@layout/fragment_add_transaction" />
+    <fragment
+        android:id="@+id/transactionDetailFragment"
+        android:name="com.example.expensetracker.ui.TransactionDetailFragment"
+        android:label="@string/transaction_details"
+        tools:layout="@layout/fragment_transaction_details">
+        <action
+            android:id="@+id/action_transactionDetailFragment_to_editTransactionFragment"
+            app:destination="@id/editTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToSaveState="true" />
+        <argument
+            android:name="transaction"
+            app:argType="com.example.expensetracker.model.TransactionModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/editTransactionFragment"
+        android:name="com.example.expensetracker.ui.EditTransactionFragment"
+        android:label="@string/edit_transaction"
+        tools:layout="@layout/fragment_edit_transaction">
+        <argument
+            android:name="transaction"
+            app:argType="com.example.expensetracker.model.TransactionModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.expensetracker.ui.DashboardFragment"
+        android:label="@string/dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_DashboardFragment_to_addTransactionFragment"
+            app:destination="@id/addTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_DashboardFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.expensetracker.dialogs.BottomSheetFragment"
+        android:label="@string/select_currency"
+        tools:layout="@layout/fragment_bottom_sheet" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.expensetracker.ui.ReportsFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.expensetracker.ui.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

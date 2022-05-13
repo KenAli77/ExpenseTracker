@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="6dp"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_transaction_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/icon_background_shape"
+            android:padding="10dp"
+            android:src="@drawable/ic_food"
+            app:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_transaction_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/iv_transaction_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_transaction_icon"
+            tools:text="Transaction" />
+
+        <TextView
+            android:id="@+id/tv_transaction_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_transaction_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_transaction_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_transaction_title"
+            tools:text="Description" />
+
+        <TextView
+            android:id="@+id/tv_transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_transaction_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_transaction_icon"
+            tools:text="- $ 19.99"
+            tools:textColor="@android:color/holo_red_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

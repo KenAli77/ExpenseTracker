@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name" translatable="false">ExpenseTracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="nav_drawer_header">My Expense Tracker</string>
+    <string name="oops">Oops..</string>
+    <string name="empty_transactions_text">It seems there are no transactions to display, try adding one</string>
+    <string name="btn_add_transaction_text">ADD TRANSACTION</string>
+    <string name="select_currency">Pick a new currency</string>
+    <string name="usd">$ USD</string>
+    <string name="eur">€ EUR</string>
+    <string name="gbp">£ GBP</string>
+    <string name="jpy">¥ JPY</string>
+    <string name="add_new_transaction">add new transaction</string>
+    <string name="btn_save_transaction_text">SAVE TRANSACTION</string>
+    <string name="total_expenses_analysis">Total expenses analysis</string>
+    <string name="total_income_analysis">Total income analysis</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="spending_limit">Spending Limit</string>
+    <string name="enter_amount">Enter amount..</string>
+    <string name="title">Title</string>
+    <string name="transaction_title">Transaction title</string>
+    <string name="type">Type</string>
+    <string name="transaction_type">Transaction type</string>
+    <string name="category">Category</string>
+    <string name="transaction_category">Transaction category</string>
+    <string name="amount">Amount</string>
+    <string name="transaction_amount">Transaction Amount</string>
+    <string name="notes">Notes</string>
+    <string name="transaction_notes">Transaction Notes</string>
+    <string name="date">Date</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="edit">EDIT</string>
+    <string name="total_expense">TOTAL EXPENSE</string>
+    <string name="expenses_by_category">Expenses by category</string>
+    <string name="income_by_category">Income by category</string>
+    <string name="total_income">TOTAL INCOME</string>
+    <string name="spending_progress">Spending progress</string>
+    <string name="limit_not_set">limit not set</string>
+    <string name="warning">warning</string>
+    <string name="spending_warning">Attention! You are close to hitting your spending limit!</string>
+    <string name="total_balance">TOTAL BALANCE</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
+    <string name="export_data">Export data</string>
+    <string name="transaction_saved">Transaction saved successfully</string>
+    <string name="missing_field">Please enter field</string>
+    <string name="required_field">field required</string>
+    <string name="invalid_date">Please enter a valid date</string>
+    <string name="missing_transaction_type">Please select transaction type</string>
+    <string name="missing_category">Please select a category</string>
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="transaction_deleted">Transaction deleted successfully</string>
+    <string name="undo">Undo</string>
+    <string name="income">Income</string>
+    <string name="expenses">Expenses</string>
+    <string name="change_saved">changes saved successfully</string>
+    <string name="invalid_spending_limit">please enter a spending limit</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="add_transaction">Add transaction</string>
+    <string name="transaction_details">Transaction details</string>
+    <string name="edit_transaction">Edit transaction</string>
+
+
+    <string name="bills">Bills</string>
+    <string name="food">Food </string>
+    <string name="education">Education</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="housing">Housing</string>
+    <string name="health">Health</string>
+    <string name="travel">Travel</string>
+    <string name="transportation">Transportation</string>
+    <string name="shopping">Shopping</string>
+    <string name="other">Other</string>
+    <string name="salary">Salary</string>
+    <string name="investments">Investments</string>
+    <string name="save">save</string>
+
+    <string-array name="periods">
+        <item>all transactions</item>
+        <item>this month</item>
+        <item>last month </item>
+        <item>last three months</item>
+        <item>last six months</item>
+        <item>Last Year</item>
+    </string-array>
+</resources>

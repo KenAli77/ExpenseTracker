@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/drawable-v31/icon_background_shape.xml" value="0.1375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/drawable/button_background.xml" value="0.1765" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/drawable/empty_field_background.xml" value="0.1765" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/drawable/icon_background_shape.xml" value="0.1375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/drawer_nav_header.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/empty_data_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_add_transaction.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.264" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_edit_transaction.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_expense_report.xml" value="0.2" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_income_report.xml" value="0.2" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_reports.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/fragment_transaction_details.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/input_fields_layout.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/item_expense_card_view.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/item_income_card_view.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/list_item_transaction.xml" value="0.4" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/navigation_drawer.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/spending_limit_progress_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/spending_warning_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/layout/total_balance_view.xml" value="0.264" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/menu/drawer_header_menu.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AndroidStudioProjects/ExpenseTracker/app/src/main/res/menu/main_top_menu.xml" value="0.2234375" />
+        <entry key="..\:/Users/kened/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

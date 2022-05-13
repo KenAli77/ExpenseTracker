@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expense_card_view"
+    android:layout_width="200dp"
+    android:layout_height="110dp"
+    android:backgroundTint="@color/surface"
+    android:padding="20dp"
+    app:cardCornerRadius="6dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/icon_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_income"
+            app:tint="@android:color/holo_green_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="@string/total_income"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_total_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            tools:text="$300"
+            android:fontFamily="@font/nunito_bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
