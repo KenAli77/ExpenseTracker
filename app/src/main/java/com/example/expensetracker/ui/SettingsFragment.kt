@@ -1,15 +1,14 @@
 package com.example.expensetracker.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.expensetracker.R
 import com.example.expensetracker.databinding.FragmentSettingsBinding
-import com.example.expensetracker.ui.MainActivity
 import com.example.expensetracker.util.getCurrencySymbol
 import com.example.expensetracker.viewmodel.TransactionsViewModel
 
@@ -38,7 +37,8 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         lifecycleScope.launchWhenCreated {
             switchDarkTheme.isChecked = viewModel.readUIPreference("night_mode") == true
 
-                binding.switchDarkTheme.setOnCheckedChangeListener { dayMode, nightMode ->
+
+                switchDarkTheme.setOnCheckedChangeListener { _, nightMode ->
                     lifecycleScope.launchWhenStarted {
                         if (nightMode) {
                             viewModel.saveUIPreference("night_mode", true)

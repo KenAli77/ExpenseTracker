@@ -29,7 +29,7 @@ class TransactionDetailFragment : Fragment(R.layout.fragment_transaction_details
         lifecycleScope.launchWhenStarted {
             transactionItem.collect { transaction ->
                 tvDetailsTitle.text = transaction.title
-                tvDetailsCategory.text = transaction.category
+                tvDetailsCategory.text = getString(transaction.category.description)
                 tvDetailsNotes.text = transaction.note
                 tvDetailsType.text = transaction.transactionType
                 tvDetailsDate.text = transaction.date

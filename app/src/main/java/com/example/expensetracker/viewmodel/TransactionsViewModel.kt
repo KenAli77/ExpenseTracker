@@ -34,7 +34,7 @@ class TransactionsViewModel(
     var transaction: LiveData<List<TransactionModel>> =
         getAllTransactions().asLiveData()
 
-    private val _isWarningClosed = MutableLiveData<Boolean>(false)
+    private val _isWarningClosed = MutableLiveData(false)
     var isWarningClosed = _isWarningClosed
 
     private val _selectedCurrency = MutableStateFlow("USD")
@@ -67,7 +67,6 @@ class TransactionsViewModel(
     }
 
     init {
-
         transaction
     }
 

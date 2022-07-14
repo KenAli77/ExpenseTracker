@@ -5,47 +5,55 @@
     android:id="@+id/expense_card_view"
     android:layout_width="200dp"
     android:layout_height="110dp"
-    android:backgroundTint="@color/surface"
-    android:padding="20dp"
-    app:cardCornerRadius="6dp"
-    android:layout_margin="5dp">
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="40dp"
+    android:elevation="0dp"
+    android:layout_margin="10dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >
 
         <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/icon_expense"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
             android:src="@drawable/ic_expense"
-            app:tint="@android:color/holo_red_light" />
+             />
 
         <TextView
+            android:id="@+id/tv_total_expense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="@string/total_expense"
             android:fontFamily="@font/nunito_semibold"
+            android:text="@string/total_expense"
             android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/icon_expense"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icon_expense"
             />
 
         <TextView
+            app:layout_constraintTop_toBottomOf="@id/tv_total_expense"
+            app:layout_constraintStart_toStartOf="@id/tv_total_expense"
             android:id="@+id/tv_total_expenses"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:text="$300"
-            android:fontFamily="@font/nunito_bold"
+            android:fontFamily="@font/nunito_semibold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-            android:textSize="25sp"
+            android:textSize="20sp"
             />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

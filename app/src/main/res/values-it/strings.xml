@@ -4,7 +4,7 @@
     <string name="open">apri</string>
     <string name="close">chiudi</string>
     <string name="nav_drawer_header">My Expense Tracker</string>
-    <string name="oops">Oops..</string>
+    <string name="get_started">Oops..</string>
     <string name="empty_transactions_text">Sembra che tu non abbia ancora inserito transazioni, prova ad aggiungerne una</string>
     <string name="btn_add_transaction_text">AGGIUNGI</string>
     <string name="select_currency">Seleziona valuta</string>

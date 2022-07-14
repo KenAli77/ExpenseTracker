@@ -13,10 +13,11 @@ import com.example.expensetracker.R
 import com.example.expensetracker.databinding.FragmentEditTransactionBinding
 import com.example.expensetracker.model.TransactionModel
 import com.example.expensetracker.util.Constants
+import com.example.expensetracker.util.TransactionCategory
 import com.example.expensetracker.util.getCurrencySymbol
 import com.example.expensetracker.viewmodel.TransactionsViewModel
 import com.google.android.material.snackbar.Snackbar
-import java.lang.Double
+import java.lang.Double.parseDouble
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -53,7 +54,7 @@ class EditTransactionFragment : Fragment(R.layout.fragment_edit_transaction) {
                 )
             }
             etTransactionCategory.apply {
-                setText(transaction.category)
+                setText(getString(transaction.category.description))
                 setAdapter(
                 ArrayAdapter(
                     requireContext(),
@@ -102,22 +103,22 @@ class EditTransactionFragment : Fragment(R.layout.fragment_edit_transaction) {
 
     private fun getNoteFromData(): TransactionModel = binding.inputFields.let {
         val title = it.etTransactionTitle.text.toString()
-        val amount = Double.parseDouble(it.etTransactionAmount.text.toString())
+        val amount = parseDouble(it.etTransactionAmount.text.toString())
         val date = it.etTransactionDate.text.toString()
         val category = when (it.etTransactionCategory.text.toString()) {
-            getString(R.string.bills) -> "bills"
-            getString(R.string.food)-> "food"
-            getString(R.string.education) ->  "education"
-            getString(R.string.entertainment) -> "entertainment"
-            getString(R.string.housing) -> "housing"
-            getString(R.string.health) -> "health"
-            getString(R.string.travel)-> "travel"
-            getString(R.string.transportation)-> "transportation"
-            getString(R.string.shopping)-> "shopping"
-            getString(R.string.salary)-> "salary"
-            getString(R.string.investments)-> "investments"
-            getString(R.string.other)-> "other"
-            else -> "other"
+            getString(R.string.bills) -> TransactionCategory.Bills
+            getString(R.string.food) -> TransactionCategory.Food
+            getString(R.string.education) -> TransactionCategory.Education
+            getString(R.string.entertainment) -> TransactionCategory.Entertainment
+            getString(R.string.housing) -> TransactionCategory.Housing
+            getString(R.string.health) -> TransactionCategory.Health
+            getString(R.string.travel)-> TransactionCategory.Travel
+            getString(R.string.transportation)-> TransactionCategory.Transportation
+            getString(R.string.shopping)-> TransactionCategory.Shopping
+            getString(R.string.salary)-> TransactionCategory.Salary
+            getString(R.string.investments)-> TransactionCategory.Investments
+            getString(R.string.other)-> TransactionCategory.Other
+            else -> TransactionCategory.Other
         }
         val type = when(it.etTransactionType.text.toString()){
             getString(R.string.income) -> "Income"

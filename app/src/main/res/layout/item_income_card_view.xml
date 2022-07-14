@@ -5,46 +5,53 @@
     android:id="@+id/expense_card_view"
     android:layout_width="200dp"
     android:layout_height="110dp"
-    android:backgroundTint="@color/surface"
-    android:padding="20dp"
-    app:cardCornerRadius="6dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="40dp"
+    android:elevation="0dp"
     android:layout_margin="5dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
 
         <ImageView
             android:id="@+id/icon_expense"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/ic_income"
-            app:tint="@android:color/holo_green_light" />
+            />
 
         <TextView
+            android:id="@+id/tv_total_income_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
             android:fontFamily="@font/nunito_semibold"
             android:text="@string/total_income"
-            android:textSize="13sp"/>
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/icon_expense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icon_expense"
+         />
 
         <TextView
             android:id="@+id/tv_total_income"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:maxWidth="90dp"
+            android:textAlignment="textEnd"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            tools:text="$300"
-            android:fontFamily="@font/nunito_bold"
+            android:fontFamily="@font/nunito_semibold"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-            android:textSize="25sp"
-            />
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_income_text"
+            tools:text="$30" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

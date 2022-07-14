@@ -7,7 +7,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.AdapterView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
@@ -80,41 +79,49 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     }
 
     private fun setPeriodFilter() = with(binding) {
-        spTransactionsFilter.onItemSelectedListener =
-            object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(
-                    adapterView: AdapterView<*>?,
-                    view: View?,
-                    position: Int,
-                    id: Long
-                ) {
-                    when (position) {
-                        0 ->
-                            viewModel.period.postValue(Period.ofYears(10))
-                        1 ->
-                            viewModel.period.postValue(Period.ofDays(30))
-                        2 ->
-                            viewModel.period.postValue(Period.ofMonths(2))
-                        3 ->
-                            viewModel.period.postValue(Period.ofMonths(3))
-                        4 ->
-                            viewModel.period.postValue(Period.ofMonths(6))
-                        5 ->
-                            viewModel.period.postValue(Period.ofYears(1))
-                        else -> viewModel.period.postValue(Period.ofYears(10))
-                    }
-                }
 
-                override fun onNothingSelected(p0: AdapterView<*>?) {
+        chipsTransactionsFilter.filterChipGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                chipsTransactionsFilter.chipAllTransactions.id -> viewModel.period.postValue(
+                    Period.ofYears(
+                        10
+                    )
+                )
+                chipsTransactionsFilter.chipTenDays.id -> viewModel.period.postValue(
+                    Period.ofDays(
+                        10
+                    )
+                )
+                chipsTransactionsFilter.chipThirtyDays.id -> viewModel.period.postValue(
+                    Period.ofDays(
+                        30
+                    )
+                )
+                chipsTransactionsFilter.chipSixtyDays.id -> viewModel.period.postValue(
+                    Period.ofDays(
+                        60
+                    )
+                )
+                chipsTransactionsFilter.chipNinetyDays.id -> viewModel.period.postValue(
+                    Period.ofDays(
+                        90
+                    )
+                )
+                chipsTransactionsFilter.chipSixMonths.id -> viewModel.period.postValue(
+                    Period.ofMonths(
+                        60
+                    )
+                )
+                else -> viewModel.period.postValue(Period.ofYears(10))
 
-                }
             }
-
+        }
     }
+
 
     @SuppressLint("SetTextI18n")
     private fun setUpViews() = with(binding) {
-
+        chipsTransactionsFilter.chipAllTransactions.isChecked = true
         lifecycleScope.launchWhenStarted {
 
             val limit = viewModel.readLimit("limit")

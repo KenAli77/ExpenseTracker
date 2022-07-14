@@ -1,8 +1,6 @@
 package com.example.expensetracker.repository
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.room.*
 import com.example.expensetracker.db.TransactionsDatabase
 import com.example.expensetracker.model.TransactionModel
 import kotlinx.coroutines.flow.Flow
@@ -21,9 +19,6 @@ class TransactionsRepository(private val db: TransactionsDatabase) {
 
     fun getTransactionById(id: Int): Flow<TransactionModel> =
         db.transactionsDao().getTransactionById(id)
-
-    fun getAllTransactionsByCat(category: String): LiveData<List<TransactionModel>> =
-        db.transactionsDao().getAllTransactionsByCat(category)
 
 
 }

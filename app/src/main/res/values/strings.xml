@@ -5,8 +5,8 @@
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="nav_drawer_header">My Expense Tracker</string>
-    <string name="oops">Oops..</string>
-    <string name="empty_transactions_text">It seems there are no transactions to display, try adding one</string>
+    <string name="get_started">Get started</string>
+    <string name="empty_transactions_text">enter your first transaction by tapping on the + button</string>
     <string name="btn_add_transaction_text">ADD TRANSACTION</string>
     <string name="select_currency">Pick a new currency</string>
     <string name="usd">$ USD</string>
@@ -33,15 +33,15 @@
     <string name="date">Date</string>
     <string name="transaction_date">Transaction Date</string>
     <string name="edit">EDIT</string>
-    <string name="total_expense">TOTAL EXPENSE</string>
+    <string name="total_expense">EXPENSES</string>
     <string name="expenses_by_category">Expenses by category</string>
     <string name="income_by_category">Income by category</string>
-    <string name="total_income">TOTAL INCOME</string>
+    <string name="total_income">INCOME</string>
     <string name="spending_progress">Spending progress</string>
     <string name="limit_not_set">limit not set</string>
     <string name="warning">warning</string>
-    <string name="spending_warning">Attention! You are close to hitting your spending limit!</string>
-    <string name="total_balance">TOTAL BALANCE</string>
+    <string name="spending_warning">Attention! You almost reached your spending limit!</string>
+    <string name="total_balance">BALANCE</string>
     <string name="reports">Reports</string>
     <string name="settings">Settings</string>
     <string name="export_data">Export data</string>
@@ -77,6 +77,12 @@
     <string name="salary">Salary</string>
     <string name="investments">Investments</string>
     <string name="save">save</string>
+    <string name="all_transactions">all transactions</string>
+    <string name="ten_days">10 days</string>
+    <string name="thirty_days">30 days</string>
+    <string name="sixty_days">60 days</string>
+    <string name="ninety_days">90 days</string>
+    <string name="six_months">6 months</string>
 
     <string-array name="periods">
         <item>all transactions</item>

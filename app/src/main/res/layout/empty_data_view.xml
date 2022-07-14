@@ -5,38 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.airbnb.lottie.LottieAnimationView
+    <ImageView
         android:id="@+id/animation_no_data"
-        android:layout_width="357dp"
-        android:layout_height="201dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/no_data"
-        app:lottie_repeatMode="restart" />
+        android:src="@drawable/ic_empty_data_placeholder"
+       />
 
     <TextView
         android:id="@+id/tv_oops"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
-        android:text="@string/oops"
+        android:text="@string/get_started"
         android:textColor="@color/black"
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="@string/empty_transactions_text"
         android:textAlignment="center"
         android:textColor="@color/black"

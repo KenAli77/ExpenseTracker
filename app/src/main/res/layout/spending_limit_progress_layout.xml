@@ -18,12 +18,13 @@
     <ProgressBar
         android:id="@+id/progress_bar_spending"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="2dp"
+        android:layout_height="15dp"
         android:layout_margin="3dp"
         android:max="10"
         android:progress="5"
-        android:progressTint="@color/blue_500"
+        android:progressDrawable="@drawable/custom_progress_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_spending_progress" />
 

@@ -23,10 +23,10 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
     lateinit var viewModel: TransactionsViewModel
-    lateinit var drawerLayout: DrawerLayout
-    lateinit var navView: NavigationView
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navView: NavigationView
     private lateinit var appBarConfiguration: AppBarConfiguration
 
 

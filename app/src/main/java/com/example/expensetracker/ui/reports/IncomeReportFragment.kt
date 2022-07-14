@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import com.example.expensetracker.R
 import com.example.expensetracker.databinding.FragmentIncomeReportBinding
 import com.example.expensetracker.ui.MainActivity
-import com.example.expensetracker.util.Constants
+import com.example.expensetracker.util.TransactionCategory
 import com.example.expensetracker.viewmodel.TransactionsViewModel
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.components.Legend
@@ -18,7 +18,8 @@ import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 
 
-class IncomeReportFragment : Fragment(R.layout.fragment_income_report) {
+class IncomeReportFragment :
+    Fragment(R.layout.fragment_income_report) {
 
     private lateinit var binding: FragmentIncomeReportBinding
     private lateinit var viewModel: TransactionsViewModel
@@ -58,28 +59,13 @@ class IncomeReportFragment : Fragment(R.layout.fragment_income_report) {
             val income = transactions.filter { it.transactionType == "Income" }
             val totalIncome = income.sumOf { it.amount }
 
-            for (category in Constants(requireContext()).categories) {
+            for (category in TransactionCategory.TRANSACTION_CATEGORIES) {
 
-                val categoryName = when (category) {
-                    "bills" -> getString(R.string.bills)
-                    "food" -> getString(R.string.food)
-                    "education" -> getString(R.string.education)
-                    "entertainment" -> getString(R.string.entertainment)
-                    "housing" -> getString(R.string.housing)
-                    "health" -> getString(R.string.health)
-                    "travel" -> getString(R.string.travel)
-                    "transportation" -> getString(R.string.transportation)
-                    "shopping" -> getString(R.string.shopping)
-                    "salary" -> getString(R.string.salary)
-                    "investments" -> getString(R.string.investments)
-                    "other" -> getString(R.string.other)
-                    else -> getString(R.string.other)
-                }
-                val categoryList = income.filter { it.category == category }
+                val categoryList = income.filter { it.category.description == category.description }
                 val totalCategory = categoryList.sumOf { it.amount }
                 val percentageValue = (totalCategory / totalIncome).toFloat()
                 if (totalCategory > 0) {
-                    entryValues.add(PieEntry(percentageValue, categoryName))
+                    entryValues.add(PieEntry(percentageValue, getString(category.description)))
                 }
             }
             val colors = ArrayList<Int>()

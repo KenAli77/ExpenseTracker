@@ -54,7 +54,7 @@
                     layout="@layout/item_expense_card_view"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_marginEnd="5dp"
+                    android:layout_margin="3dp"
                     android:layout_weight="1" />
 
                 <include
@@ -62,7 +62,7 @@
                     layout="@layout/item_income_card_view"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_margin="3dp"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -77,16 +77,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll_cards" />
 
-            <Spinner
-                android:id="@+id/sp_transactions_filter"
-                style="@style/spinnerItemStyle"
+            <include
+                android:id="@+id/chips_transactions_filter"
+                layout="@layout/transaction_period_filter_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:entries="@array/periods"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spending_progress" />
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_transactions"
@@ -96,7 +93,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sp_transactions_filter"
+                app:layout_constraintTop_toBottomOf="@+id/chips_transactions_filter"
                 tools:listitem="@layout/list_item_transaction" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
