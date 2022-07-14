@@ -1,6 +1,6 @@
 ![](https://github.com/kenali95/WeatherApp/blob/master/Weather%20App%20GitHub%20Banner.png)
 
-# Weather App
+# My Expense Tracker
 
 Expense tracker app to keep your finances in order. 
 Built entirely in Kotlin using modern architecture components.
