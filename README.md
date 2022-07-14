@@ -1,4 +1,4 @@
-![](https://github.com/kenali95/WeatherApp/blob/master/Weather%20App%20GitHub%20Banner.png)
+![](https://github.com/KenAli77/ExpenseTracker/blob/master/1.png)
 
 # My Expense Tracker
 
@@ -19,3 +19,5 @@ My Expense Tracker is built following MVVM design pattern and using the followin
 - [Android Architecture Components ](https://developer.android.com/topic/architecture) - Collection of libraries that contains the lifecycle-aware components.
 
 And of course, a lot of heart :)
+
+![](https://github.com/KenAli77/ExpenseTracker/blob/master/2.png)
