@@ -20,4 +20,4 @@ My Expense Tracker is built following MVVM design pattern and using the followin
 
 And of course, a lot of heart :)
 
-![](https://github.com/KenAli77/ExpenseTracker/blob/master/2.png)
+![](https://github.com/KenAli77/ExpenseTracker/blob/master/My%20Expense%20Tracker%20GitHub%20Banner.png)
