@@ -5,7 +5,7 @@
     android:id="@+id/expense_card_view"
     android:layout_width="200dp"
     android:layout_height="110dp"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="@color/surface"
     app:cardCornerRadius="40dp"
     android:elevation="0dp"
     android:layout_margin="10dp">

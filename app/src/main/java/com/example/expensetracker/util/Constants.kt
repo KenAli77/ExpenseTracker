@@ -18,6 +18,7 @@ class Constants ( context: Context) {
         context.getString(TransactionCategory.Education.description),
         context.getString(TransactionCategory.Entertainment.description),
         context.getString(TransactionCategory.Housing.description),
+        context.getString(TransactionCategory.Health.description),
         context.getString(TransactionCategory.Travel.description),
         context.getString(TransactionCategory.Transportation.description),
         context.getString(TransactionCategory.Shopping.description),

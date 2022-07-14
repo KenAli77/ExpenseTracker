@@ -130,74 +130,74 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
                 viewModel.period.observe(viewLifecycleOwner) { period ->
 
-                    viewModel.filterAllTransactions(period)
+                    viewModel.transaction.observe(viewLifecycleOwner) { transaction ->
 
-                        .observe(viewLifecycleOwner) { transaction ->
+                        if (transaction.isNullOrEmpty()) {
+                            hideViews()
+                        } else {
+                            showViews()
+                        }
+                        setPeriodFilter()
 
-                            if (transaction.isNullOrEmpty()) {
-                                hideViews()
+                        val (totalIncome, totalExpense) =
+                            transaction.partition { it.transactionType == "Income" }
+
+                        val income: Double = totalIncome.sumOf { it.amount }
+                        val expense: Double = totalExpense.sumOf { it.amount }
+                        val balance = income - expense
+
+                        itemIncomeCardView.tvTotalIncome.text =
+                            currencyFormat(income, selectedCurrency)
+                        itemExpenseCardView.tvTotalExpenses.text =
+                            currencyFormat(expense, selectedCurrency)
+                        totalBalanceView.tvTotalBalance.text =
+                            currencyFormat(balance, selectedCurrency)
+                        val spendingOnLimit = if (limit == null || limit == 0) {
+                            spendingProgress.tvSpendingLimit.text =
+                                getString(R.string.limit_not_set)
+                            0.00
+                        } else {
+                            spendingProgress.tvSpendingLimit.text =
+                                currencyFormat(limit.toDouble(), selectedCurrency)
+                            expense / limit
+                        }
+
+                        val spendingPercentage = if (spendingOnLimit > 0) {
+                            (spendingOnLimit * 100).roundToInt()
+                        } else {
+                            0
+                        }
+                        spendingProgress.tvProgress.text = "$spendingPercentage%"
+                        val progress = if (spendingOnLimit > 0) {
+                            (spendingOnLimit * 10).roundToInt()
+                        } else {
+                            0
+                        }
+                        spendingProgress.progressBarSpending.progress = progress
+
+                        viewModel.isWarningClosed.observe(viewLifecycleOwner) { warning ->
+
+                            if (spendingPercentage >= 80 && !warning) {
+                                val animateSlideDown =
+                                    AnimationUtils.loadAnimation(activity, R.anim.slide_up)
+                                warningView.root.visibility = View.VISIBLE
+                                warningView.root.animation = animateSlideDown
                             } else {
-                                showViews()
-                            }
-                            setPeriodFilter()
-
-
-                            val (totalIncome, totalExpense) =
-                                transaction.partition { it.transactionType == "Income" }
-
-                            val income: Double = totalIncome.sumOf { it.amount }
-                            val expense: Double = totalExpense.sumOf { it.amount }
-                            val balance = income - expense
-
-                            //spending limit setup
-
-                            val spendingOnLimit = if (limit == null || limit == 0) {
-                                spendingProgress.tvSpendingLimit.text =
-                                    getString(R.string.limit_not_set)
-                                0.00
-                            } else {
-                                spendingProgress.tvSpendingLimit.text =
-                                    currencyFormat(limit.toDouble(), selectedCurrency)
-                                expense / limit
-                            }
-
-                            val spendingPercentage = if (spendingOnLimit > 0) {
-                                (spendingOnLimit * 100).roundToInt()
-                            } else {
-                                0
-                            }
-                            spendingProgress.tvProgress.text = "$spendingPercentage%"
-                            val progress = if (spendingOnLimit > 0) {
-                                (spendingOnLimit * 10).roundToInt()
-                            } else {
-                                0
-                            }
-                            spendingProgress.progressBarSpending.progress = progress
-
-                            viewModel.isWarningClosed.observe(viewLifecycleOwner) { warning ->
-
-                                if (spendingPercentage >= 80 && !warning) {
-                                    val animateSlideDown =
-                                        AnimationUtils.loadAnimation(activity, R.anim.slide_up)
-                                    warningView.root.visibility = View.VISIBLE
-                                    warningView.root.animation = animateSlideDown
-                                } else {
-                                    warningView.root.visibility = View.GONE
-                                }
-
-                            }
-
-                            warningView.ivClose.setOnClickListener {
                                 warningView.root.visibility = View.GONE
-                                viewModel.isWarningClosed.postValue(true)
                             }
 
-                            itemIncomeCardView.tvTotalIncome.text =
-                                currencyFormat(income, selectedCurrency)
-                            itemExpenseCardView.tvTotalExpenses.text =
-                                currencyFormat(expense, selectedCurrency)
-                            totalBalanceView.tvTotalBalance.text =
-                                currencyFormat(balance, selectedCurrency)
+                        }
+
+                        warningView.ivClose.setOnClickListener {
+                            warningView.root.visibility = View.GONE
+                            viewModel.isWarningClosed.postValue(true)
+                        }
+
+
+                    }
+
+                    viewModel.filterAllTransactions(period)
+                        .observe(viewLifecycleOwner) { transaction ->
 
                             adapter.differ.submitList(transaction)
                         }
