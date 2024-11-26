@@ -1,6 +1,6 @@
 ![](https://github.com/KenAli77/ExpenseTracker/blob/master/1.png)
 
-# My Expense Tracker
+# Spendify
 
 Expense tracker app to keep your finances in order. 
 Built entirely in Kotlin using modern architecture components.
